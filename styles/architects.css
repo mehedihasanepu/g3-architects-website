@@ -21,6 +21,10 @@
     cursor: pointer;
 }
 
+.text-light-gray {
+    color: #727272;
+}
+
 /* header sytle */
 header {
     background: rgba(255, 144, 14, 0.10);
@@ -68,63 +72,85 @@ nav li a {
     font-weight: 700;
 }
 
-.banner-description, .teams-description {
-    color: #727272;
-}
-.banner img{
+.banner img {
     width: 100%;
     margin-top: 20px;
 }
 
-
-/* responsive media queries */
-/* for mobile device */
-@media screen and (max-width: 576px) {
-    header{
-        padding: 20px;
-    }    
-nav{
-    flex-direction: column;
-}
-}
-/* for tablet device */
-@media screen and (min-width:576px) and (max-width:960px) {
-    header{
-        padding: 50px;
-    }
-    nav {
-        flex-direction: column;
-    }
-}
 /* main section styles */
-main{
+main {
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
+
 /* team section styles */
-.team-container{
+.team-container {
     display: flex;
     align-items: center;
 }
-.team-img-container{
+
+.team-img-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
-.teams-content{
+
+.teams-content {
     padding-left: 4.2rem;
+    padding-right: 4.2rem;
 }
-.teams-title{
+
+.teams-title {
     font-size: 2.8rem;
 }
-.teams-title .quick-list{
+
+.teams-title .quick-list {
     color: #727272;
     font-weight: 500;
 }
-.teams-title .text-features{
+
+.teams-title .text-features {
     color: #FF900E;
     font-weight: 700;
 }
-.teams-description{
+
+.teams-description {
     padding-bottom: 10px;
+}
+
+/* responsive media queries */
+/* for mobile device */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 20px;
+    }
+
+    nav,
+    .team-container {
+        flex-direction: column;
+    }
+
+    .team-img-container {
+        grid-template-columns: 1fr;
+    }
+
+    .teams-content {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+/* for tablet device */
+@media screen and (min-width:576px) and (max-width:960px) {
+    header {
+        padding: 50px;
+    }
+
+    nav,
+    .team-container {
+        flex-direction: column;
+    }
+    .teams-content {
+        text-align: center;
+    }
 }
