@@ -18,6 +18,7 @@
     border: 0;
     font-size: 1.25rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 /* header sytle */
@@ -34,15 +35,18 @@ nav {
 
 nav>ul {
     display: flex;
+}
+
+nav li {
     list-style: none;
+    margin-right: 30px;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 nav li a {
     text-decoration: none;
-    margin-left: 30px;
     color: #424242;
-    font-size: 1rem;
-    font-weight: 500;
 }
 
 .nav-title {
@@ -66,4 +70,29 @@ nav li a {
 
 .banner-description {
     color: #727272;
+}
+.banner img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+/* responsive media queries */
+/* for mobile device */
+@media screen and (max-width: 576px) {
+    header{
+        padding: 20px;
+    }    
+nav{
+    flex-direction: column;
+}
+}
+/* for tablet device */
+@media screen and (min-width:576px) and (max-width:960px) {
+    header{
+        padding: 50px;
+    }
+    nav {
+        flex-direction: column;
+    }
 }
